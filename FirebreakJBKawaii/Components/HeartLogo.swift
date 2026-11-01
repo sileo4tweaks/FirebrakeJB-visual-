@@ -52,22 +52,22 @@ struct HeartShape: Shape {
         let cx = rect.midX
 
         path.move(to: CGPoint(x: cx, y: rect.maxY))
-        path.addCubicCurve(
+        path.addCurve(
             to: CGPoint(x: rect.minX, y: rect.minY + h * 0.35),
             control1: CGPoint(x: cx - w * 0.4, y: rect.maxY - h * 0.1),
             control2: CGPoint(x: rect.minX, y: rect.midY + h * 0.1)
         )
-        path.addCubicCurve(
+        path.addCurve(
             to: CGPoint(x: cx, y: rect.minY + h * 0.25),
             control1: CGPoint(x: rect.minX, y: rect.minY),
             control2: CGPoint(x: cx - w * 0.2, y: rect.minY)
         )
-        path.addCubicCurve(
+        path.addCurve(
             to: CGPoint(x: rect.maxX, y: rect.minY + h * 0.35),
             control1: CGPoint(x: cx + w * 0.2, y: rect.minY),
             control2: CGPoint(x: rect.maxX, y: rect.minY)
         )
-        path.addCubicCurve(
+        path.addCurve(
             to: CGPoint(x: cx, y: rect.maxY),
             control1: CGPoint(x: rect.maxX, y: rect.midY + h * 0.1),
             control2: CGPoint(x: cx + w * 0.4, y: rect.maxY - h * 0.1)
