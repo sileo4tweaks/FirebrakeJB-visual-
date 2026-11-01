@@ -37,6 +37,14 @@ enum Theme {
         endPoint: .bottomTrailing
     )
 
+    
+    static let pinkLavenderHorizontal = LinearGradient(
+        colors: [pink, lavender],
+        startPoint: .leading,
+        endPoint: .trailing
+    )
+    
+    
     static let pinkLavenderVertical = LinearGradient(
         colors: [pink, lavender],
         startPoint: .top,
