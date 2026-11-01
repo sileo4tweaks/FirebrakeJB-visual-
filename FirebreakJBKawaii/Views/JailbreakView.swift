@@ -471,18 +471,6 @@ extension LinearGradient {
     )
 }
 
-// MARK: - Blink modifier
-
-struct Blink: ViewModifier {
-    @State private var visible = true
-    func body(content: Content) -> some View {
-        content
-            .opacity(visible ? 1 : 0.3)
-            .animation(.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: visible)
-            .onAppear { visible.toggle() }
-    }
-}
-
 extension View {
     func blink() -> some View { modifier(Blink()) }
 }
